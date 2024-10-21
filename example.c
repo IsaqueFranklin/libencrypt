@@ -5,6 +5,7 @@
 int main(void);
 
 int main() {
+  Arcfour *rc4;
   char *key, *from, *encrypted, *decrypted;
 
   key = "tomatoes"; /* 8 bits -> 2048 bits */

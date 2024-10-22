@@ -2,6 +2,8 @@
 
 #include "arcfour.h"
 
+#define F fflush(stdout); 
+
 int main(void);
 
 int main() {
@@ -13,4 +15,9 @@ int main() {
   skey = strlen(key);
   from = "Shall I compare thee to a summer's day?";
   stext = strlen(from);
+
+  printf("Initializing encryption...");
+  rc4 = rc4init(key, skey);
+  
+
 }

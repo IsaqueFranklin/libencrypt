@@ -11,8 +11,10 @@
 
 struct s_arcfour {
   //...
-}
+  int x;
+};
 
+typedef struct s_arcfour Arcfour;
 typedef unsigned char int8;
 typedef unsigned short int int16;
 typedef unsigned int int32;

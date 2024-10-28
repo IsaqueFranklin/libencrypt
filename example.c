@@ -30,9 +30,14 @@ void printbin(int8 *input, const int16 size) {
 }
 
 int main() {
-  Arcfour *rc4;
+  //Arcfour *rc4;
   int16 skey, stext;
   char *key, *from, *encrypted, *decrypted;
+
+  key=from=encrypted=decrypted=0;
+  from=key;
+
+  skey=stext = 0;
 
   key = "tomatoes"; /* 8 bits -> 2048 bits */
   skey = strlen(key);
@@ -45,7 +50,7 @@ int main() {
 
   printf("'%s'\n -> ", from);
   //encrypted = rc4encrypt(from, stext);
-  printbin(key, skey);
+  printbin((int8 *)key, skey);
 
   return 0;
 }

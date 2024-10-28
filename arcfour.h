@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
+#include <errno.h>
 
 #define rc4decrypt(x, y)            rc4encrypt(x, y)
 

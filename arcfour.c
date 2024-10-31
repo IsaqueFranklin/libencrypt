@@ -3,6 +3,7 @@
 
 Arcfour *rc4init(int8 *key, int16 size){
   int8 x;
+  int8 tmp1, tmp2;
 
   Arcfour *p;
 
@@ -11,9 +12,13 @@ Arcfour *rc4init(int8 *key, int16 size){
   }
 
   for(x=0; <256; x++){
-    p->s[];
+    p->s[x] = 0;
   }
+  p->i=p->j=p->k = 0;
 
+  for(p->i = 0; p->i < 256; p->i++){
+    p->s[i] = i;
+  }
   /*
   for i from 0 to 255
     S[i] := i
@@ -24,4 +29,8 @@ Arcfour *rc4init(int8 *key, int16 size){
       swap values of S[i] and S[j]
     endfor
   */
+
+  for(p->i = 0; p->i < 256; p->i++){
+
+  }
 }

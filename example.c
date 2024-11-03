@@ -45,12 +45,12 @@ int main() {
   stext = strlen(from);
 
   printf("Initializing encryption...");
-  //rc4 = rc4init(key, skey);
+  rc4 = rc4init(key, skey);
   printf("done\n");
 
   printf("'%s'\n -> ", from);
   //encrypted = rc4encrypt(from, stext);
-  printbin((int8 *)key, skey);
+  printbin(rc4->s, skey);
 
   return 0;
 }
